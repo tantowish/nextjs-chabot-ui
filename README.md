@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ✨Nextjs Chabot UI✨
 
-## Getting Started
+<!-- <div align="center">
+  <a href="https://github.com/tantowish/zenspire-be">
+    <img src="https://raw.githubusercontent.com/tantowish/toshka-images/main/zenspire/mockup%20handphone%202.png" alt="Logo" width="700" >
+  </a>
+</div>
 
-First, run the development server:
+<div align="center">
+    <a href="https://zenspire.vercel.app/" target="_blank" style="text-decoration: none;">
+        Official Website
+    </a>
+</div> -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ℹ️About
+
+
+
+## 🔧Getting started
+
+**Clone**
+
+```
+git clone https://github.com/tantowish/nextjs-chatbot-ui.git
+cd zenspire-be
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Setup Environment**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cp .env.example .env
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Install local dependencies**
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Generate & Migrate the database**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npx prisma generate
+npx prisma migrate dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Running Service**
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️Technologies (Backend)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**TypeScript** : A statically typed superset of JavaScript used for building scalable and maintainable back-end applications.
+
+**Nextjs** : React Framework.
+
+**Prisma** : ORM.
+
+**Vercel SDK** : Advanced AI technology SDK.
+
+## 📁Project Structure (Backend)
+
+```
+|-- prisma/             # Database related folder
+|-- public/             # Public Folder
+|-- src/
+|   |-- app/            # Main application logic
+|   |-- components      # Reusable fomponents
+|   |-- context         # Context
+|   |-- data            # Data fetching action
+|   |-- hooks           # Custom hooks
+|   |-- lib             # Helper
+|   |-- type            # Type declaration
+```
+
+## 🛢Database ERD
+
+- 
+
+## 🧾License
+
+This project is licensed under the [MIT](https://github.com/tantowish/nextjs-chatbot-ui/blob/main/MIT-LICENSE.txt) License. You are free to use, modify, and distribute the code as you see fit.
