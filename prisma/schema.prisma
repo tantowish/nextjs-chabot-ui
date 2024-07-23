@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  admin
+  user
+}
+
+
+
+model User {
+  id                Int                 @id @default(autoincrement())
+  name              String              @db.VarChar(255)
+  email             String              @unique @db.VarChar(255)
+  password          String              @db.VarChar(255)
+  image             String?             @db.VarChar(255)
+  role              Role
+  institution       String?             @db.VarChar(255)
+  created_at        DateTime            @default(now())
+  updated_at        DateTime            @updatedAt
+  Subscription      Subscription[]
+  ChatHistory       Chat[]
+
+  @@map("users")
+}
+
+model Chat {
+  id         String   @id @default(uuid())
+  user_id    Int
+  user       User     @relation(fields: [user_id], references: [id])
+  type_id    Int?
+  messages   Json
+  filesId    Json
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("chats")
+}
+
+model Subscription {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  user       User     @relation(fields: [user_id], references: [id])
+  package_id Int
+  package    Package  @relation(fields: [package_id], references: [id])
+  price      Int
+  start_date DateTime @default(now())
+  end_date   DateTime
+  updated_at DateTime @updatedAt
+
+  @@map("subscriptions")
+}
+
+model Package {
+  id           Int            @id @default(autoincrement())
+  name         String         @db.VarChar(255)
+  price        Int
+  month        Int
+  created_at   DateTime       @default(now())
+  updated_at   DateTime       @updatedAt
+  Subscription Subscription[]
+
+  @@map("packages")
+}
