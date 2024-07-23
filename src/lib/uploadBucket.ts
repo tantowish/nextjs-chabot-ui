@@ -6,7 +6,7 @@ type UploadResponse = {
 
 export async function uploadBucket(file: File): Promise<string> {
     const uploadUrl = '/api/files/upload';
-    const dir = 'tentiran';
+    const dir = 'chabot';
     const formData = new FormData();
     formData.append('file', file);
     formData.append('dir', dir);

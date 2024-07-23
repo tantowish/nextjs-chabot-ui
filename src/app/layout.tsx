@@ -12,8 +12,8 @@ const quicksand = Quicksand({
 })
 
 export const metadata: Metadata = {
-  title: "Tentiran AI",
-  description: "First Multi Modal Model Provider in Indonesia",
+  title: "Nextjs Chabot UI",
+  description: "Open Source Multimodal Provider",
 };
 
 export default function RootLayout({

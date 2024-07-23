@@ -12,7 +12,7 @@ export default async function RegisterPage() {
   }
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-        <h1 className="text-center text-3xl font-bold">Tentiran AI</h1>
+        <h1 className="text-center text-3xl font-bold">Nextjs Chabot UI</h1>
         <section className="w-full max-w-lg  flex flex-col items-center py-8">
             <h2 className="text-center text-xl mb-4 font-semibold">Sign Up</h2>
             <div className="w-full px-8">

@@ -6,7 +6,7 @@ import GoogleAuthButton from "@/components/google-auth-button";
 export default async function LoginPage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-        <h1 className="text-center text-3xl font-bold">Tentiran AI</h1>
+        <h1 className="text-center text-3xl font-bold">nextjs chabot ui</h1>
         <section className="w-full max-w-lg  flex flex-col items-center py-8">
             <h2 className="text-center text-xl mb-4 font-semibold">Sign In</h2>
             <div className="w-full px-8">
