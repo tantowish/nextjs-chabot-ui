@@ -50,15 +50,19 @@ npx prisma migrate dev
 npm run dev
 ```
 
-## 🛠️Technologies (Backend)
+## 🛠️Technologies
 
 **TypeScript** : A statically typed superset of JavaScript used for building scalable and maintainable back-end applications.
 
 **Nextjs** : React Framework.
 
+**PostgreSQ:** : SQL Database
+
 **Prisma** : ORM.
 
 **Vercel SDK** : Advanced AI technology SDK.
+
+
 
 ## 📁Project Structure (Backend)
 
